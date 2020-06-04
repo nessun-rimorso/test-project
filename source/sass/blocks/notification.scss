@@ -1,0 +1,56 @@
+.notification {
+  background-color: $white;
+  box-shadow: 0 4px 26px 0 $white-darker;
+
+  &__header {
+    display: flex;
+    padding: 30px 15px 15px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0 15px 10px;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0 15px;
+  }
+
+  &__picture {
+    width: 375px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    margin-right: 15px;
+  }
+
+  &__time {
+    margin-right: 15px;
+
+    font-size: 14px;
+    color: $grey;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .notification {
+    width: $desktop-width;
+    margin: 100px auto;
+
+    border-radius: 8px;
+    overflow: hidden;
+
+  &__description {
+      margin-bottom: 30px;
+    }
+
+    &__picture {
+      width: 1300px;
+      height: 450px;
+    }
+  }
+}

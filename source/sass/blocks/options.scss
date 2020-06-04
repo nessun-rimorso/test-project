@@ -1,0 +1,179 @@
+.options {
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0;
+
+    color: $white;
+
+    background-color: $main;
+    transition: height 300ms ease-out;
+
+    &:not(:first-child) {
+      border-top: 1px solid $blue-darker;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding: 15px 60px 15px 15px;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $main-light;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 15px;
+
+      display: block;
+      width: 10px;
+      height: 2px;
+
+      background-color: $white;
+      border-radius: 3px;
+      transition: 300ms ease-out;
+    }
+
+    &::before {
+      transform: translate(-7px, -50%) rotate(40deg);
+    }
+
+    &::after {
+      transform:  translateY(-50%) rotate(-40deg);
+    }
+  }
+
+  &__description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    margin: 0;
+    padding: 0 15px;
+
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15px;
+
+      display: block;
+      width: calc(100% - 30px);
+      height: 1px;
+
+      background-color: $blue-darker;
+    }
+  }
+
+  &__description-text {
+    margin: 15px 0 0;
+  }
+
+  .options__item--active {
+
+    .options__description {
+      max-height: 1000px;
+      opacity: 1;
+      transition: max-height 0.8s ease-in;
+    }
+
+    .options__title {
+
+      &::before {
+        transform: translateX(-7px) rotate(-40deg);
+      }
+
+      &::after {
+        transform: rotate(40deg);
+      }
+    }
+  }
+
+  &__picture {
+    width: 250px;
+    height: 250px;
+    margin: 30px auto 30px;
+
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  &__form {
+    order: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .options {
+
+    &__item--active {
+
+      .options__description {
+
+      }
+    }
+
+    &__title {
+      padding: 30px 80px 30px 45px;
+
+      &::before,
+      &::after {
+        right: 45px;
+      }
+    }
+
+    &__description {
+      padding: 0 45px;
+
+      &:before {
+        left: 45px;
+        width: calc(100% - 90px);
+      }
+    }
+
+    &__picture {
+      position: absolute;
+      top: 30px;
+      right: 155px;
+
+      margin: 0;
+    }
+
+    &__description-text {
+      width: 690px;
+      margin-right: 110px;
+
+      &:first-of-type {
+        margin-top: 30px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__form {
+      width: 280px;
+    }
+  }
+}

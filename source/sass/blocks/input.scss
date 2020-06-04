@@ -1,0 +1,70 @@
+.input {
+  position: relative;
+
+  &__input {
+    width: 100%;
+    padding: 6px 50px 6px 0;
+
+    color: $white;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $blue-darker;
+    text-overflow:ellipsis;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $white;
+    }
+
+    &::placeholder {
+      font-family: $sourceSansPro;
+      font-size: 16px;
+      line-height: 1.5;
+      color: $white;
+    }
+  }
+
+  &__btn-clean {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    background-color: $blue-darker;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+
+      display: block;
+      width: 2px;
+      height: 12px;
+
+      background-color: $main;
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: $white;
+    }
+  }
+}

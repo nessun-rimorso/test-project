@@ -1,0 +1,10 @@
+.logo {
+
+  &__link {
+    font-family: $sourceSansPro;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: $grey;
+    text-decoration: none;
+  }
+}

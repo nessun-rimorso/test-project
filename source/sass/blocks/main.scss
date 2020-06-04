@@ -1,0 +1,9 @@
+.main__notification {
+  margin: 60px 0 40px;
+}
+
+@media (min-width: $desktop-width) {
+  .main__notification {
+    margin: 100px 0 100px;
+  }
+}

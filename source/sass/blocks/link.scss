@@ -1,0 +1,11 @@
+.link {
+  color: $blue;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    border-bottom: 1px dashed $blue;
+  }
+}
