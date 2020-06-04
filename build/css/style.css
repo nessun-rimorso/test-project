@@ -156,6 +156,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 30px 15px 15px; }
   .notification__title {
     margin: 0;
@@ -318,6 +321,10 @@ a {
   font-size: 14px; }
   .profile__profile-description {
     display: none; }
+  .profile__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 @media (min-width: 1300px) {
   .profile {

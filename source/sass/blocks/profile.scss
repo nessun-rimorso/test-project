@@ -5,6 +5,10 @@
   &__profile-description {
     display: none;
   }
+
+  &__image {
+    display: flex;
+  }
 }
 
 @media (min-width: $desktop-width) {
